@@ -1,0 +1,989 @@
+.overall {
+  display: flex;
+  
+}
+
+/* Left Side */
+.left-log {
+
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.logo-image {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Right Side */
+.right-log {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.form {
+  margin-right: 100px;
+}
+
+.login-form {
+  padding: 20px 30px;
+  height: 800px;
+  width: 500px;
+  background-color: #2e2e2e;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-items: stretch;
+  justify-content: center;
+}
+
+.lables {
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+
+  justify-content: center;
+}
+
+.login-form h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-form label {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+
+  width: 100%;
+  background-color: #666;
+  color: white;
+  font-size: 14px;
+}
+
+/* ===== BUTTON STYLES ===== */
+
+/* Primary Submit Button (Send OTP, Verify Code, Complete Registration) */
+.submit-btn {
+  padding: 12px 24px;
+  font-family: "Rajdhani", sans-serif;
+  border: none;
+  background-color: #40ba36;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(64, 186, 54, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: #36a82e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(64, 186, 54, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(64, 186, 54, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.submit-btn:disabled:hover {
+  background-color: #cccccc !important;
+  transform: none !important;
+}
+
+/* Back Button - White Style */
+.back-button {
+  width: 100%;
+  max-width: 150px;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #2e2e2e;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.back-button:hover {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #1a1a1a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.back-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+  color: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+/* General Button (for other buttons like those in username form) */
+.login-form button:not(.submit-btn):not(.back-button) {
+  font-family: "Rajdhani", sans-serif;
+  border: none;
+  background-color: #40ba36;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(64, 186, 54, 0.3);
+}
+
+.login-form button:not(.submit-btn):not(.back-button):hover {
+  background-color: #36a82e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(64, 186, 54, 0.4);
+}
+
+.login-form button:not(.submit-btn):not(.back-button):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(64, 186, 54, 0.3);
+}
+
+.login-form button:not(.submit-btn):not(.back-button):disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #cccccc;
+  color: #666666;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Verification Method Buttons */
+.verification-btn {
+  padding: 12px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 120px;
+  height: 45px;
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.verification-btn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.verification-btn.active {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #2e2e2e;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.verification-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.verification-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Resend OTP Button */
+.resend-button {
+  width: 100%;
+  max-width: 180px;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: 2px solid #ffa502;
+  border-radius: 8px;
+  background-color: #ffa502;
+  color: #ffffff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 165, 2, 0.3);
+}
+
+.resend-button:hover {
+  background-color: #ff9500;
+  border-color: #ff9500;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 165, 2, 0.4);
+}
+
+.resend-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 165, 2, 0.3);
+}
+
+p {
+  margin: 0px;
+}
+.resend-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #cccccc;
+  border-color: #cccccc;
+  color: #666666;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== RESPONSIVE BUTTON STYLES ===== */
+
+/* Desktop Large Screens */
+@media (min-width: 1201px) {
+  .submit-btn {
+    max-width: 220px;
+    font-size: 20px;
+    height: 55px;
+  }
+
+  .back-button {
+    max-width: 170px;
+    font-size: 17px;
+  }
+
+  .login-form button:not(.submit-btn):not(.back-button) {
+    max-width: 270px;
+    font-size: 20px;
+    height: 55px;
+  }
+}
+
+/* Desktop Medium Screens */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .submit-btn {
+    max-width: 200px;
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .back-button {
+    max-width: 150px;
+    font-size: 16px;
+  }
+
+  .login-form button:not(.submit-btn):not(.back-button) {
+    max-width: 250px;
+    font-size: 18px;
+    height: 50px;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 900px) and (min-width: 550px) {
+  .overall {
+    padding-top: 100px;
+  }
+  .submit-btn {
+    max-width: 100%;
+    width: 100%;
+    font-size: 18px;
+    height: 50px;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 2px solid #2e2e2e;
+  }
+
+  .submit-btn:hover {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+  }
+
+  .back-button {
+    max-width: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    color: #2e2e2e;
+    border: 2px solid #2e2e2e;
+    font-size: 16px;
+  }
+
+  .back-button:hover {
+    background-color: #f8f9fa;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+  }
+
+  .resend-button {
+    max-width: 100%;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .login-form button:not(.submit-btn):not(.back-button):not(.resend-button) {
+    max-width: 100%;
+    width: 100%;
+
+    background-color: #2e2e2e;
+    color: #ffffff;
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .login-form
+    button:not(.submit-btn):not(.back-button):not(.resend-button):hover {
+    background-color: #1a1a1a;
+  }
+
+  .verification-btn {
+    padding: 10px 16px;
+    font-size: 15px;
+    height: 42px;
+    min-width: 100px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .submit-btn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    height: 48px;
+    padding: 12px 20px;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 2px solid #2e2e2e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .submit-btn:hover {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+  }
+
+  .back-button {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    color: #2e2e2e;
+    border: 2px solid #2e2e2e;
+    font-size: 15px;
+    height: 45px;
+    margin-top: 10px;
+  }
+
+  .back-button:hover {
+    background-color: #f8f9fa;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+  }
+
+  .resend-button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    height: 45px;
+    margin-top: 10px;
+  }
+
+  .login-form button:not(.submit-btn):not(.back-button):not(.resend-button) {
+    width: 100%;
+    max-width: 100%;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    font-size: 16px;
+    height: 48px;
+  }
+
+  .login-form
+    button:not(.submit-btn):not(.back-button):not(.resend-button):hover {
+    background-color: #1a1a1a;
+  }
+
+  .verification-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    height: 38px;
+    min-width: 80px;
+    border-radius: 6px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .verification-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* ===== MESSAGE STYLES ===== */
+
+/* Error Message */
+.error-message {
+  color: #ff4757;
+  background-color: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Success Message */
+.success-message {
+  color: #2ed573;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Info Message */
+.info-message {
+  color: #3742fa;
+  background-color: rgba(55, 66, 250, 0.1);
+  border: 1px solid rgba(55, 66, 250, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Note Message */
+.note-message {
+  color: #ffffff;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* ===== RESPONSIVE MESSAGE STYLES ===== */
+
+@media (max-width: 900px) {
+  .overall {
+    padding-top: 100px;
+  }
+  .error-message,
+  .info-message {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .success-message {
+    font-size: 15px;
+  }
+
+  .note-message {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-message,
+  .info-message {
+    font-size: 12px;
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  .success-message {
+    font-size: 14px;
+  }
+
+  .note-message {
+    font-size: 12px;
+  }
+}
+
+/* Back button styles - REMOVED - Now handled in main button section above */
+
+/* Mid-range screen fix (avoid overlap between 900px and 1200px) */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .left-log {
+    width: 55%;
+  }
+
+  .right-log {
+    width: 45%;
+  }
+
+  .logo-image {
+    max-width: 500px;
+  }
+
+  .login-form {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .form {
+    margin-right: 40px;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 900px) {
+  .overall {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .left-log,
+  .right-log {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-image {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .form {
+    margin-right: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 0;
+    background-color: white;
+    color: black;
+    box-shadow: none;
+  }
+
+  .login-form h2,
+  .login-form label {
+    color: black;
+  }
+
+  .login-form input {
+    background-color: white;
+    border: 2px solid #ccc;
+    color: black;
+  }
+
+  /* Button styles handled in main button section above */
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .left-log {
+    display: none;
+  }
+
+  .right-log {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    box-shadow: none;
+  }
+
+  .login-form h2,
+  .login-form label {
+    color: black;
+  }
+
+  .login-form input {
+    background-color: white;
+    border: 2px solid grey;
+    color: black;
+  }
+
+  .lables {
+    color: black;
+  }
+
+  /* Button styles handled in main button section above */
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f3f1;
+  color: #000;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  user-select: none;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.username-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+}
+
+.phone-display {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.phone-display p {
+  margin: 0;
+  font-size: 16px;
+  color: #495057;
+}
+
+.phone-display strong {
+  color: #212529;
+}
+
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  min-height: 80px;
+  /* Reserve space for reCAPTCHA */
+}
+
+.recaptcha-container:empty {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.recaptcha-container > div {
+  transform-origin: 0 0;
+}
+
+#recaptcha-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+/* reCAPTCHA Styles */
+.recaptcha-wrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure reCAPTCHA is properly styled */
+.g-recaptcha {
+  margin: 0 auto !important;
+  transform-origin: center;
+}
+
+/* Style for when reCAPTCHA is loading */
+.recaptcha-wrapper:empty::before {
+  content: "Loading reCAPTCHA...";
+  color: #666;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+.verification-type-selector {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.verification-type-selector h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Verification button styles are now handled in the main button section above */
+/* Submit button disabled styles are now handled in the main button section above */
+
+/* ===== OTP TIMER STYLES ===== */
+
+.otp-timer-container {
+  margin: 15px 0;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.timer-message {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.timer-display {
+  color: #40ba36;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  background-color: rgba(64, 186, 54, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(64, 186, 54, 0.3);
+  margin-left: 8px;
+}
+
+.timer-expired {
+  color: #ff4757;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Rajdhani", sans-serif;
+  background-color: rgba(255, 71, 87, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+/* Timer warning states */
+.timer-display[data-warning="true"] {
+  color: #ffa502;
+  border-color: rgba(255, 165, 2, 0.3);
+  background-color: rgba(255, 165, 2, 0.1);
+  animation: pulse-warning 1s infinite;
+}
+
+.timer-display[data-critical="true"] {
+  color: #ff4757;
+  border-color: rgba(255, 71, 87, 0.3);
+  background-color: rgba(255, 71, 87, 0.1);
+  animation: pulse-critical 0.5s infinite;
+}
+
+.otp-input-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.otp-box {
+  width: 40px;
+  height: 45px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.otp-box:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+@keyframes pulse-warning {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-critical {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ===== RESPONSIVE TIMER STYLES ===== */
+
+@media (max-width: 900px) {
+  .timer-message {
+    font-size: 15px;
+  }
+
+  .timer-display {
+    font-size: 18px;
+    padding: 3px 6px;
+  }
+
+  .timer-expired {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .otp-timer-container {
+    margin: 12px 0;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-message {
+    font-size: 14px;
+  }
+
+  .timer-display {
+    font-size: 16px;
+    padding: 2px 4px;
+    margin-left: 4px;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .timer-expired {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .otp-timer-container {
+    margin: 10px 0;
+    padding: 8px;
+  }
+}

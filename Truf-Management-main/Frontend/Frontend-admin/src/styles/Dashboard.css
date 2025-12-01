@@ -1,0 +1,284 @@
+.dashboard-wrapper {
+  margin-bottom: 100px;
+  padding: 20px;
+  width: 100%;
+}
+
+.back {
+  width: 200px;
+  height: 61px;
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.navigator {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-icon {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.date-display {
+  min-width: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.filter-select {
+  padding: 6px 12px;
+  font-weight: bold;
+  background-color: #0f1b2d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  width: 100px;
+}
+
+.total-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 1rem 0 1rem 20px;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.graph-content {
+  flex: 2;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 650px;
+  min-height: 400px;
+  white-space: nowrap;
+}
+
+.recharts-surface {
+  height: 400px !important;
+}
+
+.summary-cards {
+  flex: 1;
+  min-width: 260px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.summary-card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .graph-content,
+  .summary-cards {
+    width: 100%;
+  }
+
+  .summary-cards {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .summary-card {
+    flex: 1;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back {
+    font-size: 1.4rem;
+    width: auto;
+    margin: 0.5rem 1rem;
+  }
+
+  .filter-bar {
+    margin: 1rem;
+  }
+
+  .navigator {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .filter-select {
+    font-size: 1rem;
+  }
+
+  .total-info {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+  }
+
+  .dashboard-container {
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 0 1rem;
+  }
+
+  .graph-content {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    min-width: 100%;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .summary-card {
+    flex: 1 1 calc(33.33% - 10px);
+    font-size: 0.9rem;
+    padding: 12px;
+    min-width: 100px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .back {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0.5rem 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .filter-bar {
+    margin: 0px;
+  }
+
+  .navigator,
+  .dropdown-container {
+    align-items: flex-start;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-container {
+    justify-content: end;
+  }
+
+  .filter-select {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .total-info {
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+  }
+
+  .graph-content {
+    height: 180px;
+    padding: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 0.8rem;
+  }
+
+  .graph-content > div {
+    min-width: 500px;
+  }
+
+  .summary-cards {
+    gap: 8px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .summary-card {
+    font-size: 0.85rem;
+    padding: 10px;
+    min-width: 100%;
+  }
+
+  .recharts-tooltip-wrapper {
+    font-size: 0.75rem !important;
+  }
+
+  .recharts-default-tooltip {
+    padding: 4px !important;
+  }
+
+  .recharts-cartesian-axis-tick-value {
+    font-size: 0.7rem !important;
+  }
+
+  .recharts-text {
+    font-size: 0.7rem;
+  }
+
+  .recharts-wrapper text {
+    font-size: 10px !important;
+  }
+}

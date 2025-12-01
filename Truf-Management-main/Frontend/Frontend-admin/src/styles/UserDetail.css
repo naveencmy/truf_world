@@ -1,0 +1,191 @@
+/* Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main container */
+.booking-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Back button */
+.back {
+  width: 200px;
+  height: 61px;
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.back:hover {
+  color: rgb(118, 123, 123);
+  cursor: pointer;
+}
+
+.back img,
+.back-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.expert-button {
+  width: 180px;
+  height: 40px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Export icon */
+.print-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Search input */
+.search-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+  max-width: 100%;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #137c0c;
+}
+
+/* Table container with scroll support */
+.table-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #006400;
+  color: white;
+  border: 3px solid white;
+}
+
+td {
+  background-color: #d6d6d6;
+  border-right: 3px solid black;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+/* Table row hover effect */
+tr {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+/* Custom scrollbar */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* ========================
+   Responsive Adjustments
+======================== */
+
+@media (max-width: 768px) {
+  .back {
+    width: 160px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .expert-button {
+    font-size: 18px;
+    height: 36px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back {
+    width: 140px;
+    height: 44px;
+    font-size: 22px;
+  }
+
+  .expert-button {
+    font-size: 16px;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 600px; /* For horizontal scroll */
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+}

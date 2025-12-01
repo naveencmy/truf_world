@@ -1,0 +1,40 @@
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.loading-image {
+  width: 100px;
+  height: 100px;
+  animation: roll 2s linear infinite;
+  margin-bottom: 10px;
+  transform-origin: center center;  /* ✅ Keeps rotation centered */
+  object-fit: contain;             /* ✅ Ensures the image stays within bounds */
+}
+
+
+@keyframes roll {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(150px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,16 @@
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/turfmanagement
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/appsettings.Development.json
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/appsettings.json
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/appsettings.Production.json
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/turfmanagement.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/turfmanagement.deps.json
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/turfmanagement.runtimeconfig.json
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/turfmanagement.pdb
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Dapper.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Microsoft.Extensions.Logging.Abstractions.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Microsoft.OpenApi.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Npgsql.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll

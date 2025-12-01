@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "+1S3iGjNSnbkH0MfktIfBeRyEqO2MKrEUwovu7MgWNmFHEL1p+pgqpI4Vo90vpz4uE1rLTk9lK7WTfzuk+0g0g==",
+  "success": true,
+  "projectFilePath": "/home/kishore/Documents/all/Final-Turrf/Truf-Management-main/Backend-user/turfmanagement/turfmanagement.csproj",
+  "expectedPackageFiles": [
+    "/home/kishore/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
+    "/home/kishore/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/kishore/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/home/kishore/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "/home/kishore/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/home/kishore/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512",
+    "/home/kishore/.nuget/packages/swashbuckle.aspnetcore/6.7.3/swashbuckle.aspnetcore.6.7.3.nupkg.sha512",
+    "/home/kishore/.nuget/packages/swashbuckle.aspnetcore.swagger/6.7.3/swashbuckle.aspnetcore.swagger.6.7.3.nupkg.sha512",
+    "/home/kishore/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.7.3/swashbuckle.aspnetcore.swaggergen.6.7.3.nupkg.sha512",
+    "/home/kishore/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.7.3/swashbuckle.aspnetcore.swaggerui.6.7.3.nupkg.sha512"
+  ],
+  "logs": []
+}

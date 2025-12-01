@@ -1,0 +1,25 @@
+// Creating the login for the admin table
+
+CREATE TABLE Admin (
+    username VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(50) NOT NULL,
+    phone_number INT
+);
+
+// Create an username and password for the admin
+
+INSERT INTO public.admin(
+	username, password)
+	VALUES ('Turrfzone', 'turrfzone@123');
+
+
+// Creating an table for the canclettion for the user
+
+CREATE TABLE cancelled_slots (
+    id SERIAL PRIMARY KEY,
+    reason TEXT NOT NULL,
+    user_id INTEGER NOT NULL,
+    phone_number VARCHAR(15),
+    cancelled_by VARCHAR(50) NOT NULL,
+    cancelled_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

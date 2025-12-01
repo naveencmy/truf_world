@@ -1,0 +1,830 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Overlay background */
+.slide-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Slide-in container */
+.slide-popup {
+  width: 30%;
+  background: #fff;
+  display: flex;
+
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Slide animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.end-time-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.end-time-option {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: 0.2s;
+}
+
+.end-time-option:hover {
+  background-color: #d0f0ff;
+}
+
+.popup-cancel {
+  margin-top: 10px;
+  background: #f44336;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.main {
+  background-color: white;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.slot {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  height: 80px;
+  width: 160px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.inner-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+
+  justify-content: center;
+  align-content: center;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+.disabled {
+  background-color: #b9b9b9;
+  color: white;
+  cursor: not-allowed;
+  border: none;
+}
+
+.maintenance {
+  background-color: red;
+  color: white;
+  cursor: not-allowed;
+}
+
+.booked {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: green;
+  color: white;
+}
+
+.buttons {
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.book-btn {
+  padding: 0px 20px;
+  font-size: 20px;
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.book-btn {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  color: black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons-outside {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* POPUP STYLES */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  width: 500px;
+  height: 450px;
+  border-radius: 10px;
+  border: 2px solid #00a000;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popup h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.popup-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.popup-row,
+.popup-row2,
+.popup-row3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px ;
+  margin-bottom: 10px;
+}
+
+.popup-row2,
+.popup-row3 {
+  justify-content: flex-between;
+}
+
+.popup-row span,
+.popup-row2 span,
+.popup-row3 span {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.popup-row select,
+.time-display {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.amount-box {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.otp-input {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.popup-cancel,
+.popup-confirm {
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 290px;
+  height: 50px;
+}
+
+.popup-cancel {
+  background: white;
+  color: black;
+  border: 2px solid #40ba36;
+  padding: 0px;
+  margin: 0px;
+}
+
+.popup-confirm {
+  background: #40ba36;
+  color: black;
+  border: none;
+}
+
+.note {
+  font-size: 12px;
+  font-weight: 700;
+  padding-left: 15px;
+  margin-top: 5px;
+  color: black;
+  text-align: left;
+}
+
+/* SUCCESS POPUP */
+.success-popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  border: 3px solid green;
+}
+
+.success-message {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.success-popup h2,
+.success-popup h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.booking-table {
+  width: 100%;
+  margin: 15px 0;
+  border-collapse: collapse;
+  border: 2px solid darkgreen;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid darkgreen;
+  padding: 8px;
+  text-align: center;
+}
+
+.booking-table th {
+  background-color: darkgreen;
+  color: white;
+}
+
+.final-confirm {
+  margin-top: 15px;
+  height: 40px;
+  width: 110px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #40ba36;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.center-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px; /* or however tall you expect the grid to be */
+}
+
+
+.error {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #e57373;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.final-confirm:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .inner-inner {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .slot {
+    width: 110px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-inner {
+    gap: 10px;
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .slot {
+    width: 95px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .popup {
+    width: 420px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .popup-row span,
+  .popup-row2 span,
+  .popup-row3 span {
+    font-size: 18px;
+  }
+
+  .otp-input {
+    width: 140px;
+    font-size: 16px;
+    height: 36px;
+  }
+
+  .popup-cancel,
+  .popup-confirm {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .slide-popup {
+    width: 90%;
+    margin: 0 5%;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .login-prompt {
+    padding: 15px;
+  }
+
+  .login-prompt h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .login-prompt p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .login-btn,
+  .cancel-btn {
+    font-size: 14px;
+    height: 44px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner-inner {
+    gap: 8px;
+    padding: 5px;
+  }
+
+  .slot {
+    width: 57px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .popup {
+    width: 320px;
+    height: auto;
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .popup-row span,
+  .popup-row2 span,
+  .popup-row3 span {
+    font-size: 16px;
+  }
+
+  .popup-col {
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .time-display,
+  .amount-box,
+  .otp-input {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .popup-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popup-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    /* Center all children horizontally */
+    margin-bottom: 1rem;
+  }
+
+  .popup-row2,
+  .popup-row3 {
+    display: flex;
+
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    /* Center all children horizontally */
+    margin-bottom: 1rem;
+  }
+
+  .popup-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .time-display {
+    font-weight: bold;
+    margin-top: 4px;
+    background-color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  .final-confirm {
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .popup-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    /* Center all children horizontally */
+    margin-bottom: 1rem;
+  }
+
+  .popup-cancel,
+  .popup-confirm {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .booking-table {
+    display: none;
+  }
+
+  .success-message {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .slide-popup {
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    animation: fadeIn 0.3s ease-out;
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 12px;
+  }
+
+  .login-prompt {
+    padding: 12px;
+  }
+
+  .login-prompt h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .login-prompt p {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .login-prompt-buttons {
+    gap: 12px;
+  }
+
+  .login-btn,
+  .cancel-btn {
+    font-size: 13px;
+    height: 42px;
+    padding: 8px 16px;
+  }
+}
+
+/* Login Modal Styles */
+.login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-prompt h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.login-prompt p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  text-align: center;
+  max-width: 350px;
+}
+
+.login-prompt-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.login-btn {
+  background: #40ba36;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  height: 48px;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background: #359f2e;
+}
+
+.cancel-btn {
+  background: white;
+  color: #40ba36;
+  border: 2px solid #40ba36;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 48px;
+  width: 100%;
+}
+
+.cancel-btn:hover {
+  background: #f0f9ef;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* LOGIN REQUIRED POPUP STYLES */
+.login-required-popup {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #00a000;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-required-popup h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.login-required-popup p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.login-required-popup .popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-required-popup .login-btn {
+  background: #40ba36;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 120px;
+}
+
+.login-required-popup .login-btn:hover {
+  background: #369c2e;
+}
+
+.login-required-popup .popup-cancel {
+  background: white;
+  color: #333;
+  border: 2px solid #ccc;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.login-required-popup .popup-cancel:hover {
+  border-color: #999;
+  background: #f5f5f5;
+}
+
+/* OTP Timer and Resend Button Styles */
+.otp-timer {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.resend-otp-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}
+
+.resend-otp-btn:hover {
+  background: #0056b3;
+}
+
+.resend-otp-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.popup-confirm:disabled {
+  background: #ccc !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}

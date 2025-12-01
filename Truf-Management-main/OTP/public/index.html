@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightweight OTP System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="otp-card">
+            <h1>📱 OTP Verification</h1>
+            
+            <!-- Step 1: Phone Number Input -->
+            <div id="phone-step" class="step active">
+                <h2>Enter Your Phone Number</h2>
+                <div class="input-group">
+                    <input type="tel" id="phone" placeholder="Enter phone number" required>
+                    <button id="send-otp" onclick="sendOtp()">Send OTP</button>
+                </div>
+                <div id="phone-message" class="message"></div>
+            </div>
+
+            <!-- Step 2: OTP Verification -->
+            <div id="otp-step" class="step">
+                <h2>Enter OTP</h2>
+                <p class="info">OTP sent to <span id="phone-display"></span></p>
+                <div class="input-group">
+                    <input type="text" id="otp" placeholder="Enter 6-digit OTP" maxlength="6" required>
+                    <button id="verify-otp" onclick="verifyOtp()">Verify</button>
+                </div>
+                <div class="resend-section">
+                    <p>Didn't receive OTP? <button id="resend-otp" onclick="resendOtp()" class="link-btn">Resend</button></p>
+                    <button id="change-phone" onclick="changePhone()" class="link-btn">Change Phone Number</button>
+                </div>
+                <div id="otp-message" class="message"></div>
+                <div id="countdown" class="countdown"></div>
+            </div>
+
+            <!-- Step 3: Success -->
+            <div id="success-step" class="step">
+                <div class="success-icon">✅</div>
+                <h2>Verification Successful!</h2>
+                <p>Your phone number has been verified successfully.</p>
+                <button onclick="showBookingForm()" class="btn-primary">Make a Booking</button>
+                <button onclick="resetForm()" class="btn-secondary">Verify Another Number</button>
+            </div>
+
+            <!-- Step 4: Booking Form -->
+            <div id="booking-step" class="step">
+                <h2>🏟️ Book Your Turf</h2>
+                <div class="booking-form">
+                    <div class="input-group">
+                        <label for="userName">Your Name:</label>
+                        <input type="text" id="userName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="bookingDateTime">Date & Time:</label>
+                        <input type="datetime-local" id="bookingDateTime" required>
+                    </div>
+                    <button id="make-booking" onclick="makeBooking()" class="btn-primary">Confirm Booking</button>
+                    <button onclick="showStep('success-step')" class="btn-secondary">Back</button>
+                </div>
+                <div id="booking-message" class="message"></div>
+            </div>
+
+            <!-- Step 5: Booking Confirmation -->
+            <div id="booking-success-step" class="step">
+                <div class="success-icon">🎉</div>
+                <h2>Booking Confirmed!</h2>
+                <div id="booking-details" class="booking-details"></div>
+                <button onclick="resetForm()" class="btn-primary">Make Another Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+
+/*
+  General Body and Container Styles
+  ---------------------------------
+  Defines base font and styles for the main user container,
+  ensuring it's centered, has proper padding, and a subtle shadow.
+*/
+body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0; /* Reset default body margin */
+  background-color: #f5f7fa; /* Add a subtle background color for better contrast */
+}
+
+.user-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto; /* Add vertical margin for better spacing from edges */
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+/*
+  Header (Back link) Styles
+  --------------------------
+  Styles for the header section, typically containing a back link.
+*/
+.user-header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px; /* Increased margin for better separation */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #3b3f4e; /* Give it a specific color */
+}
+
+/*
+  Search Bar Styling
+  ------------------
+  Styles for the search input field and its container.
+*/
+.search-bar {
+  margin: 10px 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.search-bar input {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow to transition */
+}
+
+.search-bar input:focus {
+  border-color: #137c0c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(19, 124, 12, 0.2); /* Add a subtle focus ring */
+}
+
+/*
+  Parent Grid Layout
+  ------------------
+  Defines the main grid structure for arranging user information cards.
+*/
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Explicitly define two columns of equal width */
+  gap: 20px; /* Consistent gap for both rows and columns */
+  justify-content: center;
+  align-items: start; /* Align items to the start of their grid area */
+}
+
+/*
+  Grid Item Layouts
+  -------------------
+  Specific styles for each grid item (div1, div2, div3, div4)
+  including their dimensions and positioning within the grid.
+  Removed fixed heights to allow content to dictate height,
+  and adjusted widths to be flexible within their grid areas.
+*/
+.div1 {
+  grid-column: 1; /* Explicitly set column */
+  grid-row: span 2; /* Spans 2 rows */
+  width: 100%; /* Make it fill the column width */
+  /* height: 278px; Removed fixed height */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; Removed as it might center content vertically unexpectedly */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.div2 {
+  grid-column: 1;
+  grid-row: 3;
+  width: 100%;
+  /* height: 172px; Removed fixed height */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; Removed */
+  box-sizing: border-box; /* Ensure padding is included in the width/height */
+}
+
+.div3 {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  /* height: 185px; Removed fixed height */
+  box-sizing: border-box;
+}
+
+.div4 {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  /* margin-top: 20px; Removed, gap will handle spacing */
+  width: 100%;
+  /* height: 250px; Removed fixed height */
+  box-sizing: border-box;
+}
+
+/*
+  User Cards
+  -----------
+  Base styles for all user-related information cards.
+*/
+.user-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 0; /* Gaps in parent grid will handle spacing between cards */
+  overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+}
+
+/*
+  User Info Section
+  -------------------
+  Styles for the user's profile information card.
+*/
+.user-info-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px; /* Increased margin for better separation */
+  padding: 20px; /* Add padding to the header for better spacing */
+  text-align: center;
+}
+
+.user-avatar {
+  width: 70px;
+  height: 70px;
+  background: #137c0c;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+.user-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #3b3f4e;
+}
+
+.user-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 20px 20px; /* Add padding to details section */
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 8px 0; /* Add vertical padding for readability */
+  border-bottom: 1px dashed #eee; /* Subtle separator */
+}
+
+.info-row:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.label {
+  font-weight: 600;
+  color: #000;
+}
+
+.value {
+  color: #222;
+  text-align: right; /* Align value to the right */
+}
+
+/*
+  Card Header Styles
+  ------------------
+  Common styles for the header of various cards.
+*/
+.card-header {
+  background: #137c0c;
+  color: white;
+  font-weight: bold;
+  padding: 12px 16px; /* Slightly increased padding */
+  font-size: 15px; /* Slightly increased font size */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 8px; /* Apply border-radius to match card */
+  border-top-right-radius: 8px; /* Apply border-radius to match card */
+}
+
+/*
+  Badge Styles
+  -------------
+  Styles for numeric badges within card headers.
+*/
+.badge {
+  background: white;
+  color: #137c0c;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+  width: 24px; /* Slightly larger badge */
+  height: 24px; /* Slightly larger badge */
+  text-align: center;
+  line-height: 24px; /* Adjust line-height to center text vertically */
+  display: flex; /* Use flexbox to perfectly center content */
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+  Booking Info Entries
+  --------------------
+  Styles for individual booking entries within lists.
+*/
+.booking-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+}
+
+.booking-entry:first-of-type {
+  border-top: none; /* No border for the first booking entry */
+}
+
+.booking-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-date {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+
+.booking-time {
+  font-size: 15px;
+  color: #3b3f4e;
+}
+
+/*
+  Booking Status Tags
+  -------------------
+  Styles for different booking status indicators.
+*/
+.status-tag {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 16px; /* Adjusted padding for better look */
+  border-radius: 999px;
+  white-space: nowrap;
+  text-transform: uppercase; /* Make status tags uppercase for consistency */
+}
+
+.status-tag.upcoming {
+  background: #d4f5d2;
+  color: #137c0c;
+}
+
+.status-tag.completed {
+  background: #e0ffe0; /* Slightly different green for completed */
+  color: #137c0c;
+}
+.status-tag.cancelled {
+  background: #ffe1e1;
+  color: #c62828;
+}
+
+/*
+  Booking Hours Card
+  ------------------
+  Styles for the card displaying booking hours.
+*/
+.booking-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 15px 20px; /* Adjusted padding */
+  font-size: 16px; /* Slightly larger font size */
+  font-weight: 600;
+  color: #3b3f4e; /* Add a specific color */
+}
+
+/*
+  Scrollable Content
+  ------------------
+  Styles for sections that should be scrollable.
+*/
+.scrollable .booking-scroll {
+  max-height: 180px; /* Use max-height instead of height for flexibility */
+  overflow-y: auto;
+  margin-bottom: 0px;
+  padding-right: 10px; /* Add some padding for scrollbar */
+}
+
+/* Hide scrollbar for a cleaner look (optional) */
+.scrollable .booking-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable .booking-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollable .booking-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollable .booking-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/*
+  Responsive Design
+  -----------------
+  Adjustments for smaller screens, making the layout stack vertically.
+*/
+@media (max-width: 900px) {
+  .user-container {
+    margin: 10px; /* Smaller margin on smaller screens */
+    padding: 15px;
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adjust gap for column layout */
+  }
+
+  .user-header {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .search-bar {
+    justify-content: center;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    max-width: 400px; /* Allow input to be a bit wider on smaller screens */
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4 {
+    width: 100%;
+    max-width: 430px; /* Keep a max-width for readability on wider small screens */
+    height: auto; /* Allow height to be determined by content */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .user-info-header {
+    margin-bottom: 15px;
+  }
+
+  .user-info-details {
+    padding: 0 15px 15px;
+  }
+
+  .booking-entry {
+    padding: 12px 15px;
+  }
+
+  .card-header {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .booking-hours {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+
+  .scrollable .booking-scroll {
+    max-height: 150px; /* Slightly reduce scrollable height on small screens */
+  }
+}

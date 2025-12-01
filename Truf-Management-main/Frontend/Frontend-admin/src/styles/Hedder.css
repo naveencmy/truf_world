@@ -1,0 +1,238 @@
+/* ------------------------------ */
+/*          FONT SETUP           */
+/* ------------------------------ */
+
+/* Import custom Titillium Web font */
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"),
+    url("../fonts/TitilliumWeb-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------------------------ */
+/*         NAVIGATION BAR        */
+/* ------------------------------ */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo image */
+.logo {
+  height: 90px;
+  max-width: 160px;
+  margin-left: 24px;
+}
+
+/* Login text beside profile */
+.nav h4 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+  margin-right: 8px;
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* Login icon */
+.loginicon {
+  height: 24px;
+  width: 24px;
+  margin-right: 24px;
+}
+
+/* ------------------------------ */
+/*        PROFILE SECTION        */
+/* ------------------------------ */
+
+/* Clickable profile container */
+.profile-section {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Profile image/icon */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 4px;
+}
+
+/* Initials avatar circle */
+.avatar-circle {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* ------------------------------ */
+/*        DROPDOWN MENU          */
+/* ------------------------------ */
+
+/* Main dropdown container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Dropdown title/label */
+.dropdown-menu p {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+/* Buttons inside dropdown (e.g. logout) */
+.dropdown-menu button {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: #0056b3;
+}
+
+/* Top area inside dropdown (avatar + name/edit) */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Horizontal divider */
+.divider {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* Logout row with icon and text */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logout-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ------------------------------ */
+/*     NAME DISPLAY + EDITING    */
+/* ------------------------------ */
+
+/* Input and icon section when editing name */
+.edit-name-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+/* Name input box */
+.edit-name-input {
+  padding: 4px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100px;
+}
+
+/* Pencil/save icon beside name */
+.edit-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Displayed name (non-edit mode) */
+.username {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Display mode wrapper (text + icon) */
+.name-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ------------------------------ */
+/*        CHART LOADING UI       */
+/* ------------------------------ */
+
+/* Wrapper for loading animation below chart */
+.graph-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Animated shimmer loading block */
+.graph-skeleton {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 10px;
+}
+
+/* Shimmer animation keyframes */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}

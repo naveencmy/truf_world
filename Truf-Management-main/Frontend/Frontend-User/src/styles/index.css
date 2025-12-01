@@ -1,0 +1,10 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+  font-family: 'Titillium Web', sans-serif;
+  overflow-x: hidden; 
+}
